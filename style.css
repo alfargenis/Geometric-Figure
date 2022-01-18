@@ -62,8 +62,9 @@ body {
 .cuadrado{
     font-size: var(--sm);
     padding: 20px;
+    padding-top: 8px;
     display: grid;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 0.2fr;
     border-radius: 10px;
     background-color: var(--cuadrado2);
     margin-bottom: 10px;
@@ -72,7 +73,6 @@ body {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 2fr;
-    /* padding-bottom: 2px; */
 }
 
 .inputCuadrado label{
@@ -106,11 +106,22 @@ body {
     border: 1px solid var(--cuadrado);
     background-color: var(--cuadrado);
 }
+.resultadoCuadrado{
+    display: grid;
+    justify-items: center;
+}
+.resultadoCuadrado #resultadoCuadrado{
+    width: 50%;
+    border-radius: 4px;
+    border: 1px solid var(--cuadrado);
+    background-color: var(--cuadrado);
+}
 /* ---------------------------Triangulo--------------------------------- */
 
 .triangulo{
     font-size: var(--sm);
     padding: 20px;
+    padding-top: 8px;
     display: grid;
     grid-template-rows: 0.5fr 2fr;
     gap: 25px;
@@ -157,11 +168,22 @@ body {
     border: 1px solid var(--triangulo);
     background-color: var(--triangulo);
 }
+.resultadoTriangulo{
+    display: grid;
+    justify-items: center;
+}
+.resultadoTriangulo #resultadoTriangulo{
+    width: 50%;
+    border-radius: 4px;
+    border: 1px solid var(--triangulo);
+    background-color: var(--triangulo);
+}
 /* ---------------------------Circulo--------------------------------- */
 
 .circulo{
     font-size: var(--sm);
     padding: 20px;
+    padding-top: 8px;
     display: grid;
     grid-template-rows: 0.5fr 2fr;
     gap: 25px;
@@ -172,7 +194,6 @@ body {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1.5fr;
-    /* padding-bottom: 2px; */
 }
 
 .inputCirculo label{
@@ -210,6 +231,16 @@ body {
 .inputCirculo .areaCirculo{
     width: 30%;
     height: 70%;
+    border-radius: 4px;
+    border: 1px solid var(--circulo);
+    background-color: var(--circulo);
+}
+.resultadoCirculo{
+    display: grid;
+    justify-items: center;
+}
+.resultadoCirculo #resultadoCirculo{
+    width: 50%;
     border-radius: 4px;
     border: 1px solid var(--circulo);
     background-color: var(--circulo);
