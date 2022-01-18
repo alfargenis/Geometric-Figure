@@ -19,7 +19,6 @@
 }
 html{
     width: 100%;
-    /* background-image: url(https://pixnio.com/free-images/2018/10/12/2018-10-12-19-50-50-550x413.jpg); */
     background-color: transparent;
 }
 body {
@@ -27,7 +26,7 @@ body {
     width: 100%;
     height: 100%;
     justify-content: center;
-    background-image: url(/image/background-3125893_1280.jpeg);
+    background-image: url(/image/background-3125893_1280.jpeg) !important;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
