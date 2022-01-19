@@ -13,14 +13,16 @@
         <div class="title">
             <img src="https://cdn-icons-png.flaticon.com/512/32/32475.png" alt="logo">
             <h1>Calculadora Geometrica.</h1>
-        </div>    
+        </div>
         <!-- HTML Cuadrado -->
         <div class="cuadrado">
             <h2>Calcula el área y perímetro de un cuadrado</h2>
+            <img src="https://www.prolamsa.com/wp-content/uploads/2020/05/cuadrado.png" alt="cuadrado">
             <form class="inputCuadrado">
                 <label for="InputCuadrado">
-                    <p>Escribe cuánto mide cada lado del cuadrado:</p> 
+                    <p>Cuánto mide cada lado del cuadrado:</p>
                     <input id="InputCuadrado" type="number"/>
+                    <input id="unidadCuadrado" list="undMedida" type="text" placeholder="cm">
                 </label>
                 <div class="calcularCuadrado">
                     <button class="perimetroCuadrado" type="button" onclick="calcularPerimetroCuadrado()">
@@ -37,18 +39,20 @@
         </div>
         <!-- HTML Triangulo -->
         <div class="triangulo">
-            <h2>Calcula el área y perímetro de un triangulo:</h2>
+            <h2>Calcula el área y perímetro de un triangulo</h2>
+            <img src="https://es.numberempire.com/shapes/images/isosceles_triangle_main.png" alt="triangulo">
             <form class="inputTriangulo">
                 <label for="InputTriangulo1">
-                   <p>Escribe cuánto mide el lado 1 del triangulo:</p>
+                   <p>Cuánto mide el lado 1 del triangulo:</p>
                    <input id="InputTriangulo1" type="number"/>
                 </label>
                 <label for="InputTriangulo2">
-                    <p>Escribe cuánto mide el lado 2 del triangulo:</p> 
+                    <p>Cuánto mide el lado 2 del triangulo:</p>
                     <input id="InputTriangulo2" type="number"/>
+                    <input id="unidadTriangulo" list="undMedida" type="text" placeholder="cm">
                 </label>
                 <label for="InputTriangulo3">
-                    <p>Escribe cuánto mide la base del triangulo:</p>
+                    <p>Cuánto mide la base del triangulo:</p>
                     <input id="InputTriangulo3" type="number"/>
                 </label>
                 <div class="calcularTriangulo">
@@ -66,11 +70,13 @@
         </div>
         <!-- HTML Circulo -->
         <div class="circulo">
-            <h2>Calcula el área y perímetro de un circulo</h2>
+            <h2>Calcula el área, perímetro y diametro de un circulo</h2>
+            <img src="https://access.openupresources.org/curricula/our6-8math/embeds/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBdklxIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--7148689f81ae96a1b00d620371bef88ebd7c1e20/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBZzZGMjF6WDIxaGRHaGZkakpmWkdsbmFYUmhiQT09IiwiZXhwIjpudWxsLCJwdXIiOiJ2YXJpYXRpb24ifX0=--9c87e6556271e1d3a3a9dc16b03f00c39ee39775/8.9.A2.Image.01.png" alt="circulo">
             <form class="inputCirculo">
                 <label for="InputCirculo">
-                    <p>Escribe cuánto mide el radio del circulo:</p>
+                    <p>Cuánto mide el radio del circulo:</p>
                     <input id="InputCirculo" type="number"/>
+                    <input id="unidadCirculo" list="undMedida" type="text" placeholder="cm">
                 </label>
                 <div class="calcularCirculo">
                     <button class="diametroCirculo" type="button" onclick="calcularDiametroCirculo()">
@@ -89,6 +95,15 @@
             </div>
         </div>
       </section>
+      <datalist id="undMedida">
+        <option value="mm"></option>
+        <option value="cm"></option>
+        <option value="m"></option>
+        <option value="km"></option>
+        <option value="mi"></option>
+        <option value="ft"></option>
+        <option value="in"></option>
+    </datalist>
     <script src="./figuras.js"></script>
 </body>
 </html>

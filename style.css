@@ -58,6 +58,13 @@ body {
 .container p{
     text-align: end;
 }
+input::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+}
+input::placeholder{
+    color: var(--black);
+}
+
 /* ---------------------------Cuadrado--------------------------------- */
 .cuadrado{
     font-size: var(--sm);
@@ -68,18 +75,28 @@ body {
     border-radius: 10px;
     background-color: var(--cuadrado2);
     margin-bottom: 10px;
+    position: relative;
+}
+.cuadrado img{
+    width: 85px;
+    height: 85px;
+    position: absolute;
+    top: 20%;
+    left: 5%;
 }
 .inputCuadrado{
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 2fr;
 }
-
 .inputCuadrado label{
     width: 100%;
     display: grid;
-    grid-template-columns: 90% 10%;
-    padding-bottom: 5px;
+    grid-template-columns: 85% 5% 10%;
+    grid-template-rows: 1fr;
+    gap: 3px;
+    padding-bottom: 10px;
+    justify-self: start;
 }
 .inputCuadrado input{
     border: 0;
@@ -128,26 +145,35 @@ body {
     border-radius: 10px;
     background-color: var(--triangulo2);
     margin-bottom: 10px;
+    position: relative;
+}
+.triangulo img{
+    width: 85px;
+    height: 85px;
+    position: absolute;
+    top: 20%;
+    left: 5%;
 }
 .inputTriangulo{
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr 1.5fr;
-    /* padding-bottom: 2px; */
 }
 
 .inputTriangulo label{
-    width: 95%;
+    width: 100%;
     display: grid;
-    grid-template-columns: 90% 10%;
-    padding-bottom: 5px;
+    grid-template-columns: 85% 5% 15%;
+    gap: 3px;
+    padding-bottom: 10px;
+    justify-self: start;
 }
 .inputTriangulo input{
     width: 100%;
     border: 0;
     border-bottom: 1px solid var(--black);
     background-color: transparent;
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
     text-align: center;
 }
 .calcularTriangulo{
@@ -189,6 +215,14 @@ body {
     gap: 25px;
     border-radius: 10px;
     background-color: var(--circulo2);
+    position: relative;
+}
+.circulo img{
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    top: 22%;
+    left: 8%;
 }
 .inputCirculo{
     display: grid;
@@ -197,13 +231,15 @@ body {
 }
 
 .inputCirculo label{
-    width: 95%;
+    width: 100%;
     display: grid;
-    grid-template-columns: 90% 10%;
-    padding-bottom: 5px;
+    grid-template-columns: 85% 5% 15%;
+    gap: 3px;
+    padding-bottom: 10px;
+    justify-self: start;
+    align-self: center;
 }
 .inputCirculo input{
-    width: 100%;
     border: 0;
     border-bottom: 1px solid var(--black);
     background-color: transparent;
@@ -245,7 +281,11 @@ body {
     border: 1px solid var(--circulo);
     background-color: var(--circulo);
 }
-
+.inputCuadrado #unidadCuadrado,
+.inputTriangulo #unidadTriangulo,
+.inputCirculo #unidadCirculo{
+    border: 0;
+}
 @media (min-height:900px){
     .container{
         height: 1400px;
@@ -256,11 +296,30 @@ body {
     .inputTriangulo label,
     .inputCuadrado label,
     .inputCirculo label{
-        grid-template-columns: 70% 5%;
+        grid-template-columns: 70% 5% 10%;
     }
     .cuadrado,
     .triangulo,
     .circulo{
         width: 550px;
+    }
+    
+}
+@media (max-width:480px){
+    
+    .cuadrado img,
+    .triangulo img{
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        top: 30%;
+        left: 7%;
+    }
+    .circulo img{
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        top: 25%;
+        left: 10%;
     }
 }
