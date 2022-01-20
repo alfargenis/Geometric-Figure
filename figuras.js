@@ -14,10 +14,13 @@ function perimetroTriangulo(lado1, lado2, base) {
   return lado1 + lado2 + base;
 }
 
+function areaTrianguloRectandulo(base, altura) {
+  return (base * altura) / 2;
+}
 function areaTriangulo(lado1, base) {
-    var beforeCalculo = Math.pow(lado1,2) - Math.pow((base / 2),2);
-    var altura = Math.sqrt(beforeCalculo);
-    return (base * altura) / 2;
+  var beforeCalculo = Math.pow(lado1,2) - Math.pow((base / 2),2);
+  var altura = Math.sqrt(beforeCalculo);
+   return areaTrianguloRectandulo(base,altura);
 }
 
 // Código del círculo
@@ -81,15 +84,20 @@ function calcularPerimetroTriangulo() {
     document.getElementById("resultadoTriangulo").innerHTML = "Resultado: El perimetro es de " + perimetro + " " + undM;
   }
   function calcularAreaTriangulo() {
-    const input1 = document.getElementById("InputTriangulo2");
-    const input2 = document.getElementById("InputTriangulo3");
+    const input1 = document.getElementById("InputTriangulo1");
+    const input2 = document.getElementById("InputTriangulo2");
+    const input3 = document.getElementById("InputTriangulo3");
     const value1 = parseInt(input1.value);
     const value2 = parseInt(input2.value);
+    const value3 = parseInt(input3.value);
     const und= document.getElementById("unidadTriangulo");
-    const undM = und.value;
+    const undM = und.value; 
 
-    const area = areaTriangulo(value1, value2);
-    document.getElementById("resultadoTriangulo").innerHTML = "Resultado: El area es de " + area + " " + undM;
+      if (value1==value2 && value1!=value3){ 
+        const area = areaTriangulo(value1, value3);
+        document.getElementById("resultadoTriangulo").innerHTML = "Resultado: El area del isoceles es: " + area + " " + undM;
+      }else {const area = areaTrianguloRectandulo(value3, value1); 
+        document.getElementById("resultadoTriangulo").innerHTML = "Resultado: El area es de " + area + " " + undM;}
   }
 
   //-----------CIRCULO-------------//
